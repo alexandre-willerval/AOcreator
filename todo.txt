@@ -1,0 +1,10 @@
+- gérer le cookie pour la connexion
+- pour fusionner 2 bricks :
+    - $phpWord->getSections()
+    - sections -> get elements
+    - ...
+- lors de l'upload d'une nouvelle brick :
+    - l'ouvrir avec TemplateProcessor
+    - faire la recherche des champs existants dedans avec getVariables()
+    - permettre à l'utilisateur de "typer" ses champs : texte, image, paragraphe, etc...
+- tester aussi la collection "titles" pour voir s'il est possible de récupérer un sommaire du doc    
