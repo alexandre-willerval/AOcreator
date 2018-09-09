@@ -5,7 +5,7 @@ class Bdd {
   public function __construct() {
     $this->server = "localhost";
     $this->user = "root";
-    $this->password = "A!3xandr3";
+    $this->password = "xxxxxx";
     $this->database = "AOcreator";
     $this->connection();
   }

@@ -1,0 +1,9 @@
+{
+  "name": "AOcreator",
+  "version": "1.0.0",
+  "description": "A tool to automatically produce RFP answers",
+  "main": "index.php",
+  "repository": "https://github.com/alexandre-willerval/AOcreator",
+  "author": "Alexandre Willerval <alexandre@willerval.net>",
+  "license": "MIT"
+}

@@ -1,23 +1,150 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aaf4c547c51ff19568096d0d550d48d8",
+    "content-hash": "acdaff8c325334eb84bc58f6f551e4e8",
     "packages": [
         {
-            "name": "dompdf/dompdf",
-            "version": "v0.8.0",
+            "name": "components/jquery",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dompdf/dompdf.git",
-                "reference": "0f418c6b58fdeafc2a0e80eb1fa5e644e185089c"
+                "url": "https://github.com/components/jquery.git",
+                "reference": "459648cda77875519c5da3ae1dd0ed5d170aa649"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/0f418c6b58fdeafc2a0e80eb1fa5e644e185089c",
-                "reference": "0f418c6b58fdeafc2a0e80eb1fa5e644e185089c",
+                "url": "https://api.github.com/repos/components/jquery/zipball/459648cda77875519c5da3ae1dd0ed5d170aa649",
+                "reference": "459648cda77875519c5da3ae1dd0ed5d170aa649",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery.min.map",
+                        "jquery.slim.js",
+                        "jquery.slim.min.js",
+                        "jquery.slim.min.map"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JS Foundation and other contributors"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "time": "2018-03-04T13:23:48+00:00"
+        },
+        {
+            "name": "components/jqueryui",
+            "version": "1.12.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jqueryui.git",
+                "reference": "44ecf3794cc56b65954cc19737234a3119d036cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jqueryui/zipball/44ecf3794cc56b65954cc19737234a3119d036cc",
+                "reference": "44ecf3794cc56b65954cc19737234a3119d036cc",
+                "shasum": ""
+            },
+            "require": {
+                "components/jquery": ">=1.6"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "name": "jquery-ui",
+                    "scripts": [
+                        "jquery-ui.js"
+                    ],
+                    "files": [
+                        "ui/**",
+                        "themes/**",
+                        "jquery-ui.min.js"
+                    ],
+                    "shim": {
+                        "deps": [
+                            "jquery"
+                        ],
+                        "exports": "jQuery"
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "jQuery UI Team",
+                    "homepage": "http://jqueryui.com/about"
+                },
+                {
+                    "name": "Joern Zaefferer",
+                    "email": "joern.zaefferer@gmail.com",
+                    "homepage": "http://bassistance.de"
+                },
+                {
+                    "name": "Scott Gonzalez",
+                    "email": "scott.gonzalez@gmail.com",
+                    "homepage": "http://scottgonzalez.com"
+                },
+                {
+                    "name": "Kris Borchers",
+                    "email": "kris.borchers@gmail.com",
+                    "homepage": "http://krisborchers.com"
+                },
+                {
+                    "name": "Mike Sherov",
+                    "email": "mike.sherov@gmail.com",
+                    "homepage": "http://mike.sherov.com"
+                },
+                {
+                    "name": "TJ VanToll",
+                    "email": "tj.vantoll@gmail.com",
+                    "homepage": "http://tjvantoll.com"
+                },
+                {
+                    "name": "Corey Frang",
+                    "email": "gnarf37@gmail.com",
+                    "homepage": "http://gnarf.net"
+                },
+                {
+                    "name": "Felix Nagel",
+                    "email": "info@felixnagel.com",
+                    "homepage": "http://www.felixnagel.com"
+                }
+            ],
+            "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
+            "time": "2016-09-16T05:47:55+00:00"
+        },
+        {
+            "name": "dompdf/dompdf",
+            "version": "v0.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dompdf/dompdf.git",
+                "reference": "5113accd9ae5d466077cce5208dcf3fb871bf8f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/5113accd9ae5d466077cce5208dcf3fb871bf8f6",
+                "reference": "5113accd9ae5d466077cce5208dcf3fb871bf8f6",
                 "shasum": ""
             },
             "require": {
@@ -25,8 +152,8 @@
                 "ext-gd": "*",
                 "ext-mbstring": "*",
                 "phenx/php-font-lib": "0.5.*",
-                "phenx/php-svg-lib": "0.2.*",
-                "php": ">=5.3.0"
+                "phenx/php-svg-lib": "0.3.*",
+                "php": ">=5.4.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.8.*",
@@ -66,44 +193,62 @@
             ],
             "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
             "homepage": "https://github.com/dompdf/dompdf",
-            "time": "2017-02-16T02:40:40+00:00"
+            "time": "2017-11-26T14:49:08+00:00"
         },
         {
-            "name": "pclzip/pclzip",
-            "version": "2.8.2",
+            "name": "orange-opensource/orange-boosted-bootstrap",
+            "version": "v4.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ivanlanin/pclzip.git",
-                "reference": "19dd1de9d3f5fc4d7d70175b4c344dee329f45fd"
+                "url": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git",
+                "reference": "21d47e366b5844e3a29825173c6a13936a6b7926"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ivanlanin/pclzip/zipball/19dd1de9d3f5fc4d7d70175b4c344dee329f45fd",
-                "reference": "19dd1de9d3f5fc4d7d70175b4c344dee329f45fd",
+                "url": "https://api.github.com/repos/Orange-OpenSource/Orange-Boosted-Bootstrap/zipball/21d47e366b5844e3a29825173c6a13936a6b7926",
+                "reference": "21d47e366b5844e3a29825173c6a13936a6b7926",
                 "shasum": ""
             },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "pclzip.lib.php"
-                ]
+            "replace": {
+                "orange-opensource/orange-boosted-bootstrap": "self.version"
             },
+            "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-2.1"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Vincent Blavet"
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                },
+                {
+                    "name": "Yves Gatesoupe",
+                    "email": "yves1.gatesoupe@orange.com"
+                },
+                {
+                    "name": "Loïc Laussel",
+                    "email": "loic.laussel@orange.com"
                 }
             ],
-            "description": "A PHP library that offers compression and extraction functions for Zip formatted archives",
-            "homepage": "http://www.phpconcept.net/pclzip",
+            "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.1.3.",
+            "homepage": "http://boosted.orange.com",
             "keywords": [
-                "php",
-                "zip"
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "orange",
+                "responsive",
+                "sass",
+                "web"
             ],
-            "time": "2014-06-05T11:42:24+00:00"
+            "time": "2018-07-25T15:20:18+00:00"
         },
         {
             "name": "phenx/php-font-lib",
@@ -144,20 +289,23 @@
         },
         {
             "name": "phenx/php-svg-lib",
-            "version": "v0.2",
+            "version": "v0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhenX/php-svg-lib.git",
-                "reference": "de291bec8449b89acfe85691b5c71434797959dc"
+                "reference": "ccc46ef6340d4b8a4a68047e68d8501ea961442c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/de291bec8449b89acfe85691b5c71434797959dc",
-                "reference": "de291bec8449b89acfe85691b5c71434797959dc",
+                "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/ccc46ef6340d4b8a4a68047e68d8501ea961442c",
+                "reference": "ccc46ef6340d4b8a4a68047e68d8501ea961442c",
                 "shasum": ""
             },
             "require": {
-                "sabberworm/php-css-parser": "6.0.*"
+                "sabberworm/php-css-parser": "8.1.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.0"
             },
             "type": "library",
             "autoload": {
@@ -177,179 +325,27 @@
             ],
             "description": "A library to read, parse and export to PDF SVG files.",
             "homepage": "https://github.com/PhenX/php-svg-lib",
-            "time": "2016-12-13T20:25:45+00:00"
-        },
-        {
-            "name": "phpoffice/common",
-            "version": "v0.2.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHPOffice/Common.git",
-                "reference": "c9be70c80637c28c728be78e66aad4878a34f8dd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/Common/zipball/c9be70c80637c28c728be78e66aad4878a34f8dd",
-                "reference": "c9be70c80637c28c728be78e66aad4878a34f8dd",
-                "shasum": ""
-            },
-            "require": {
-                "pclzip/pclzip": "^2.8",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpdocumentor/phpdocumentor": "2.*",
-                "phploc/phploc": "2.*",
-                "phpmd/phpmd": "2.*",
-                "phpunit/phpunit": "3.7.*",
-                "sebastian/phpcpd": "2.*",
-                "squizlabs/php_codesniffer": "2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "PhpOffice\\Common\\": "src/Common/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Baker"
-                },
-                {
-                    "name": "Franck Lefevre",
-                    "homepage": "http://rootslabs.net"
-                }
-            ],
-            "description": "PHPOffice Common",
-            "homepage": "http://phpoffice.github.io",
-            "keywords": [
-                "common",
-                "component",
-                "office",
-                "php"
-            ],
-            "time": "2016-07-07T17:26:55+00:00"
-        },
-        {
-            "name": "phpoffice/phpword",
-            "version": "v0.13.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHPOffice/PHPWord.git",
-                "reference": "0a3f873972defb304de4fa2f5f53156558c11a7a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PHPWord/zipball/0a3f873972defb304de4fa2f5f53156558c11a7a",
-                "reference": "0a3f873972defb304de4fa2f5f53156558c11a7a",
-                "shasum": ""
-            },
-            "require": {
-                "ext-xml": "*",
-                "php": ">=5.3.3",
-                "phpoffice/common": "0.2.*",
-                "zendframework/zend-escaper": "2.4.*",
-                "zendframework/zend-stdlib": "2.4.*",
-                "zendframework/zend-validator": "2.4.*"
-            },
-            "require-dev": {
-                "dompdf/dompdf": "0.6.*",
-                "mpdf/mpdf": "5.*",
-                "phpdocumentor/phpdocumentor": "2.*",
-                "phploc/phploc": "2.*",
-                "phpmd/phpmd": "2.*",
-                "phpunit/phpunit": "3.7.*",
-                "squizlabs/php_codesniffer": "1.*",
-                "tecnickcom/tcpdf": "6.*"
-            },
-            "suggest": {
-                "dompdf/dompdf": "Allows writing PDF",
-                "ext-gd2": "Allows adding images",
-                "ext-xmlwriter": "Allows writing OOXML and ODF",
-                "ext-xsl": "Allows applying XSL style sheet to headers, to main document part, and to footers of an OOXML template",
-                "ext-zip": "Allows writing OOXML and ODF"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "PhpOffice\\PhpWord\\": "src/PhpWord"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Baker"
-                },
-                {
-                    "name": "Franck Lefevre",
-                    "homepage": "http://blog.rootslabs.net"
-                },
-                {
-                    "name": "Gabriel Bull",
-                    "email": "me@gabrielbull.com",
-                    "homepage": "http://gabrielbull.com/"
-                },
-                {
-                    "name": "Ivan Lanin",
-                    "homepage": "http://ivan.lanin.org"
-                },
-                {
-                    "name": "Roman Syroeshko",
-                    "homepage": "http://ru.linkedin.com/pub/roman-syroeshko/34/a53/994/"
-                }
-            ],
-            "description": "PHPWord - A pure PHP library for reading and writing word processing documents (OOXML, ODF, RTF, HTML, PDF)",
-            "homepage": "http://phpoffice.github.io",
-            "keywords": [
-                "ISO IEC 29500",
-                "OOXML",
-                "Office Open XML",
-                "OpenDocument",
-                "OpenXML",
-                "PhpOffice",
-                "PhpWord",
-                "Rich Text Format",
-                "WordprocessingML",
-                "doc",
-                "docx",
-                "html",
-                "odf",
-                "odt",
-                "office",
-                "pdf",
-                "php",
-                "reader",
-                "rtf",
-                "template",
-                "template processor",
-                "word",
-                "writer"
-            ],
-            "time": "2016-07-31T08:53:39+00:00"
+            "time": "2018-06-03T10:10:03+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
-            "version": "6.0.1",
+            "version": "8.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sabberworm/PHP-CSS-Parser.git",
-                "reference": "9ea4b00c569b19f731d0c2e0e802055877ff40c2"
+                "reference": "850cbbcbe7fbb155387a151ea562897a67e242ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sabberworm/PHP-CSS-Parser/zipball/9ea4b00c569b19f731d0c2e0e802055877ff40c2",
-                "reference": "9ea4b00c569b19f731d0c2e0e802055877ff40c2",
+                "url": "https://api.github.com/repos/sabberworm/PHP-CSS-Parser/zipball/850cbbcbe7fbb155387a151ea562897a67e242ef",
+                "reference": "850cbbcbe7fbb155387a151ea562897a67e242ef",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
             },
             "type": "library",
             "autoload": {
@@ -373,35 +369,85 @@
                 "parser",
                 "stylesheet"
             ],
-            "time": "2015-08-24T08:48:52+00:00"
+            "time": "2016-07-19T19:14:21+00:00"
         },
         {
-            "name": "zendframework/zend-escaper",
-            "version": "2.4.13",
+            "name": "twbs/bootstrap",
+            "version": "v4.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zendframework/zend-escaper.git",
-                "reference": "13f468ff824f3c83018b90aff892a1b3201383a9"
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "3b558734382ce58b51e5fc676453bfd53bba9201"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-escaper/zipball/13f468ff824f3c83018b90aff892a1b3201383a9",
-                "reference": "13f468ff824f3c83018b90aff892a1b3201383a9",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/3b558734382ce58b51e5fc676453bfd53bba9201",
+                "reference": "3b558734382ce58b51e5fc676453bfd53bba9201",
                 "shasum": ""
             },
-            "require": {
-                "php": ">=5.3.23"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0",
-                "satooshi/php-coveralls": "dev-master"
+            "replace": {
+                "twitter/bootstrap": "self.version"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev",
-                    "dev-develop": "2.5-dev"
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "https://getbootstrap.com/",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "time": "2018-07-24T15:54:34+00:00"
+        },
+        {
+            "name": "zendframework/zend-escaper",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-escaper.git",
+                "reference": "31d8aafae982f9568287cb4dce987e6aff8fd074"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-escaper/zipball/31d8aafae982f9568287cb4dce987e6aff8fd074",
+                "reference": "31d8aafae982f9568287cb4dce987e6aff8fd074",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6.x-dev",
+                    "dev-develop": "2.7.x-dev"
                 }
             },
             "autoload": {
@@ -413,50 +459,41 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "homepage": "https://github.com/zendframework/zend-escaper",
+            "description": "Securely and safely escape HTML, HTML attributes, JavaScript, CSS, and URLs",
             "keywords": [
+                "ZendFramework",
                 "escaper",
-                "zf2"
+                "zf"
             ],
-            "time": "2015-05-07T14:55:31+00:00"
+            "time": "2018-04-25T15:48:53+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "2.4.13",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-stdlib.git",
-                "reference": "d8ecb629a72da9f91bd95c5af006384823560b42"
+                "reference": "cd164b4a18b5d1aeb69be2c26db035b5ed6925ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/d8ecb629a72da9f91bd95c5af006384823560b42",
-                "reference": "d8ecb629a72da9f91bd95c5af006384823560b42",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/cd164b4a18b5d1aeb69be2c26db035b5ed6925ae",
+                "reference": "cd164b4a18b5d1aeb69be2c26db035b5ed6925ae",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.23"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0",
-                "satooshi/php-coveralls": "dev-master",
-                "zendframework/zend-eventmanager": "self.version",
-                "zendframework/zend-filter": "self.version",
-                "zendframework/zend-serializer": "self.version",
-                "zendframework/zend-servicemanager": "self.version"
-            },
-            "suggest": {
-                "zendframework/zend-eventmanager": "To support aggregate hydrator usage",
-                "zendframework/zend-filter": "To support naming strategy hydrator usage",
-                "zendframework/zend-serializer": "Zend\\Serializer component",
-                "zendframework/zend-servicemanager": "To support hydrator plugin manager usage"
+                "phpbench/phpbench": "^0.13",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev",
-                    "dev-develop": "2.5-dev"
+                    "dev-master": "3.2.x-dev",
+                    "dev-develop": "3.3.x-dev"
                 }
             },
             "autoload": {
@@ -468,77 +505,13 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "homepage": "https://github.com/zendframework/zend-stdlib",
+            "description": "SPL extensions, array utilities, error handlers, and more",
             "keywords": [
+                "ZendFramework",
                 "stdlib",
-                "zf2"
+                "zf"
             ],
-            "time": "2015-07-21T13:55:46+00:00"
-        },
-        {
-            "name": "zendframework/zend-validator",
-            "version": "2.4.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-validator.git",
-                "reference": "81415511fe729e6de19a61936313cef43c80d337"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-validator/zipball/81415511fe729e6de19a61936313cef43c80d337",
-                "reference": "81415511fe729e6de19a61936313cef43c80d337",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.23",
-                "zendframework/zend-stdlib": "~2.4.0"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0",
-                "satooshi/php-coveralls": "dev-master",
-                "zendframework/zend-config": "~2.4.0",
-                "zendframework/zend-db": "~2.4.0",
-                "zendframework/zend-filter": "~2.4.0",
-                "zendframework/zend-i18n": "~2.4.0",
-                "zendframework/zend-math": "~2.4.0",
-                "zendframework/zend-servicemanager": "~2.4.0",
-                "zendframework/zend-session": "~2.4.0",
-                "zendframework/zend-uri": "~2.4.0"
-            },
-            "suggest": {
-                "zendframework/zend-db": "Zend\\Db component",
-                "zendframework/zend-filter": "Zend\\Filter component, required by the Digits validator",
-                "zendframework/zend-i18n": "Zend\\I18n component to allow translation of validation error messages as well as to use the various Date validators",
-                "zendframework/zend-math": "Zend\\Math component",
-                "zendframework/zend-resources": "Translations of validator messages",
-                "zendframework/zend-servicemanager": "Zend\\ServiceManager component to allow using the ValidatorPluginManager and validator chains",
-                "zendframework/zend-session": "Zend\\Session component",
-                "zendframework/zend-uri": "Zend\\Uri component, required by the Uri and Sitemap\\Loc validators"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4-dev",
-                    "dev-develop": "2.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Validator\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "provides a set of commonly needed validators",
-            "homepage": "https://github.com/zendframework/zend-validator",
-            "keywords": [
-                "validator",
-                "zf2"
-            ],
-            "time": "2015-09-08T21:04:17+00:00"
+            "time": "2018-04-30T13:50:40+00:00"
         }
     ],
     "packages-dev": [],
