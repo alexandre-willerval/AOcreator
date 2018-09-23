@@ -14,9 +14,7 @@
   <div class="container">
      
     <!-- Title -->
-    <div class="page-header">
-      <h1><?php echo $_SESSION["page"]->getTitle(); ?></h1>
-    </div>
+    <h1 class="border-bottom border-light mt-3"><?php echo $_SESSION["page"]->getTitle(); ?></h1>
     <!-- /Title -->
     
 <?php if($_SESSION["page"]->hasMessage()) { ?>
@@ -31,7 +29,18 @@
     <!-- Content -->
 <?php $_SESSION["page"]->loadContent(); ?>
     <!-- /Content -->
-    
+
+<?php if($_SESSION["page"]->hasRetour()) { ?>
+    <!-- Back to Home -->
+    <div class="row">
+      <div class="col-12">
+        <a href="index.php?page=accueil" class="btn btn-secondary my-3" role="button">
+          <i class="fas fa-long-arrow-alt-left"></i> Retour à l'accueil
+        </a>
+      </div>
+    </div>
+    <!-- /Back to Home -->
+<?php } ?>    
   </div>
   
 </body>

@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/phpoffice/phpword/bootstrap.php';
+require_once '../vendor/phpoffice/phpword/bootstrap.php';
 
 // Creating the new document...
 $phpWord = new \PhpOffice\PhpWord\PhpWord();

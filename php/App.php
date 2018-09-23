@@ -1,8 +1,10 @@
 <?php
 class App {
   public function __construct() {
-    $_SESSION["bdd"] = new Bdd();
+    include "conf.php";
+    $_SESSION["bdd"] = new Bdd($DB_CONF);
     $_SESSION["user"] = new User();
+    $_SESSION["frameworks"] = $FRAMEWORKS;
   }
   
   public function createPage() {

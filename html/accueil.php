@@ -2,15 +2,15 @@
  <?php $menuList = $_SESSION["bdd"]->getMenuList($_SESSION["user"]->getRights());
  foreach($menuList as $menuItem) { ?>
       <div class="col-md-6">
-        <div class="thumbnail">
-          <div class="caption">
-            <h3><?php echo $menuItem["title"]; ?></h3>
-            <br/>
-            <p><?php echo $menuItem["description"]; ?></p>
-            <br/>
-            <p class="text-right">
+        <div class="card mb-3">
+          <div class="card-header">
+            <?php echo $menuItem["title"]; ?>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><?php echo $menuItem["description"]; ?></p>
+            <p class="text-right mb-0">
               <a href="index.php?page=<?php echo $menuItem["name"]; ?>" class="btn btn-primary" role="button">
-                <span class="glyphicon <?php echo $menuItem["icon"]; ?>" aria-hidden="true"></span> <?php echo $menuItem["title"].PHP_EOL; ?>
+                <i class="<?php echo $menuItem["icon"]; ?>"></i> <?php echo $menuItem["title"].PHP_EOL; ?>
               </a>
             </p>
           </div>

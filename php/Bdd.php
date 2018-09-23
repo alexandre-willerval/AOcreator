@@ -2,10 +2,10 @@
 class Bdd {
   protected $pdo, $server, $user, $password, $database;
   
-  public function __construct() {
-    $this->server = "localhost";
-    $this->user = "root";
-    $this->password = "xxxxxx";
+  public function __construct($DB_CONF) {
+    $this->server = $DB_CONF['SERVER'];
+    $this->user = $DB_CONF['USER'];
+    $this->password = $DB_CONF['PASSWORD'];
     $this->database = "AOcreator";
     $this->connection();
   }

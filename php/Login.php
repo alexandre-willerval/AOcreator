@@ -22,7 +22,7 @@ class Login {
       curl_setopt($curl, CURLOPT_USERPWD, $email.":".$password);
       $result = curl_exec($curl);
       if(curl_error($curl)) {
-        if(curl_error($curl) == "The requested URL returned error: 401 Unauthorized") {
+        if(curl_error($curl) == "The requested URL returned error: 401") {
           $pageName = "connexion";
           $message = "Adresse email ou mot de passe invalide.";
           $type = "danger";

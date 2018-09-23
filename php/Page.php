@@ -1,6 +1,6 @@
 <?php
 class Page {
-  protected $name, $visibility, $display, $title, $message, $type, $content;
+  protected $name, $visibility, $display, $title, $message, $type, $content, $retour;
   
   public function __construct($name, $message, $type) {
     $data = $_SESSION["bdd"]->getPage($name);
@@ -11,6 +11,7 @@ class Page {
     $this->message = $message;
     $this->type = $type;
     $this->content = $data["content"];
+    $this->retour = $data["retour"];
   }
   
   public function loadHtml() {
@@ -47,6 +48,10 @@ class Page {
   
   public function loadContent() {
     include $this->content;
+  }
+  
+  public function hasRetour() {
+    return $this->retour;
   }
 }
 ?>
