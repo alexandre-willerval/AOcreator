@@ -85,6 +85,11 @@ class Bdd {
     return $this->query("SELECT id, forename, surname, email, thumbnail, firstConnection, lastConnection, rights FROM users");
   }
   
+  public function getNumberUsers() {
+    $result = $this->query("SELECT COUNT(id) AS nb FROM users");
+    return intval($result[0]["nb"]);
+  }
+  
   public function setUserRights($rights) {
     $this->execute($rights, "UPDATE users SET rights = :rights WHERE id = :id");
   }
@@ -115,22 +120,23 @@ class Bdd {
     return $result[0];
   }
   
+  public function getNumberBricks() {
+    $result = $this->query("SELECT COUNT(id) AS nb FROM bricks");
+    return intval($result[0]["nb"]);
+  }
+  
   public function getProposalList() {
     return $this->query("SELECT * FROM proposals ORDER BY id DESC");
   }
   
-  public function getUserProposalList($user) {
-    return $this->query("SELECT * FROM proposals WHERE user='".$user."' ORDER BY id DESC");
-  }
-  
   public function addProposal($proposal) {
-    $this->execute($proposal, "INSERT INTO proposals VALUES(:id, :title, :clientName, :user, :firstCreated, :lastModified, :file, :step)");
+    $this->execute($proposal, "INSERT INTO proposals VALUES(:id, :title, :clientName, :consultantName, :products, :user, :firstCreated, :lastModified, :file, :step)");
     $result = $this->query("SELECT COUNT(id) AS nb FROM proposals");
     return intval($result[0]["nb"]);
   }
   
   public function updateProposal($proposal) {
-    $this->execute($proposal, "UPDATE proposals SET title = :title, clientName = :clientName, user = :user, firstCreated = :firstCreated, lastModified = :lastModified, file = :file, step = :step WHERE id = :id");
+    $this->execute($proposal, "UPDATE proposals SET title = :title, clientName = :clientName, consultantName = :consultantName, products = :products, user = :user, firstCreated = :firstCreated, lastModified = :lastModified, file = :file, step = :step WHERE id = :id");
   }
   
   public function getProposal($id) {
@@ -138,8 +144,8 @@ class Bdd {
     return $result[0];
   }
   
-  /*public function getProposalId() {
+  public function getNumberProposals() {
     $result = $this->query("SELECT COUNT(id) AS nb FROM proposals");
-    return intval($result[0]["nb"])+1;
-  }*/
+    return intval($result[0]["nb"]);
+  }
 }

@@ -1,7 +1,7 @@
     <div class="row">
  <?php $menuList = $_SESSION["bdd"]->getMenuList($_SESSION["user"]->getRights());
  foreach($menuList as $menuItem) { ?>
-      <div class="col-md-6">
+      <div class="col-12 col-md-6">
         <div class="card mb-3">
           <div class="card-header">
             <?php echo $menuItem["title"]; ?>

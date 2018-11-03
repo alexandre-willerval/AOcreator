@@ -13,7 +13,7 @@ class App {
     $type = "";
     list($pageName, $message, $type) = $this->processPage($pageName, $message, $type);
     list($pageName, $message, $type) = $this->processAction($pageName, $message, $type);
-    $_SESSION["page"] = new Page($pageName, $message, $type);
+    return new Page($pageName, $message, $type);
   }
   
   protected function processPage($pageName, $message, $type) {
@@ -54,19 +54,22 @@ class App {
           list($pageName, $message, $type) = Login::deconnexion($pageName, $message, $type);
           break;
         case "AOadmin":
-          list($pageName, $message, $type) = Helper::AOadmin($pageName, $message, $type);
+          list($pageName, $message, $type) = Admin::AOadmin($pageName, $message, $type);
           break;
         case "AOlibrary":
-          list($pageName, $message, $type) = Brick::AOlibrary($pageName, $message, $type);
+          list($pageName, $message, $type) = Library::AOlibrary($pageName, $message, $type);
           break;
         case "AOhistory":
-          list($pageName, $message, $type) = Helper::AOhistory($pageName, $message, $type);
+          list($pageName, $message, $type) = History::AOhistory($pageName, $message, $type);
           break;
-        case "AOcreator":
-          list($pageName, $message, $type) = Proposal::AOcreator($pageName, $message, $type);
+        case "AOcreator_step1":
+          list($pageName, $message, $type) = Proposal::AOcreator_step1($pageName, $message, $type);
+          break;
+        case "AOcreator_step2":
+          list($pageName, $message, $type) = Proposal::AOcreator_step2($pageName, $message, $type);
           break;
         default:
-          $message = '<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> Action invalide !';
+          $message = 'Erreur : Action invalide !';
           $type = "danger";
       }
     }

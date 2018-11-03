@@ -82,11 +82,23 @@ class Login {
       setcookie("connexion", "", time()-3600, null, null, false, true);
     }*/
     $_SESSION["user"] = new User();
+    if(isset($_SESSION["proposal"])) { 
+      unset($_SESSION["proposal"]); 
+    }
+    if(isset($_SESSION["history"])) { 
+      unset($_SESSION["history"]); 
+    }
     if(isset($_SESSION["brick"])) { 
       unset($_SESSION["brick"]); 
     }
-    if(isset($_SESSION["proposal"])) { 
-      unset($_SESSION["proposal"]); 
+    if(isset($_SESSION["library"])) { 
+      unset($_SESSION["library"]); 
+    }
+    if(isset($_SESSION["admin"])) { 
+      unset($_SESSION["admin"]); 
+    }
+    if(isset($_SESSION["stats"])) { 
+      unset($_SESSION["stats"]); 
     }
     return array("connexion", "Tu as été correctement déconnecté.", "success");
   }

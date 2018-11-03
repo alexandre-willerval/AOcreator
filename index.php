@@ -8,7 +8,7 @@
   if(!isset($_SESSION["app"])) { 
     $_SESSION["app"] = new App();
   }
-  $_SESSION["app"]->createPage();
+  $_SESSION["page"] = $_SESSION["app"]->createPage();
 
   $_SESSION["page"]->loadHtml();
 ?>

@@ -9,5 +9,6 @@
     "JQUERY_PATH" => "vendor/components/jquery/",
     "JQUERY_UI_PATH" => "vendor/components/jqueryui/",
     "FONT_AWESOME_PATH" => "vendor/components/font-awesome/css/",
+    "CHART_JS_PATH" => "vendor/nnnick/chartjs/dist/"
   );
 ?>

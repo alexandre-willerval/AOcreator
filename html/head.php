@@ -1,4 +1,3 @@
-<?php $boosted_path = "vendor/orange-opensource/orange-boosted-bootstrap/dist"; ?>  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +24,7 @@
   <!-- <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script> -->
   <!-- jQuery sortable -->
   <script src="<?php echo $_SESSION['frameworks']['JQUERY_UI_PATH'] ?>jquery-ui.min.js"></script>
+  <!-- chartjs -->
+  <script src="<?php echo $_SESSION['frameworks']['CHART_JS_PATH'] ?>Chart.bundle.min.js"></script>
   <!-- Include all compiled plugins bootstrap + Poppersjs -->
   <script src="<?php echo $_SESSION['frameworks']['BOOSTED_PATH'] ?>js/boosted.bundle.min.js"></script>
-

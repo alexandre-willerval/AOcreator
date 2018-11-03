@@ -1,4 +1,7 @@
-- gérer le cookie pour la connexion
+- AOstats (et Chart.js)
+- cookie "remember me"
+- AOcreator step2 (et jQuery-UI)
+
 - pour fusionner 2 bricks :
     - $phpWord->getSections()
     - sections -> get elements
