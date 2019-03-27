@@ -1,13 +1,12 @@
 <?php
 class Admin {
-  protected $userList;
   
   public function __construct() {
-    $this->userList = $_SESSION["bdd"]->getUserList(); 
+    
   }
   
   public function getUserList() {
-    return $this->userList;
+    return $_SESSION["bdd"]->getUserList();;
   }
   
   public static function AOadmin($pageName, $message, $type) {

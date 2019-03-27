@@ -13,6 +13,7 @@ class App {
     $type = "";
     list($pageName, $message, $type) = $this->processPage($pageName, $message, $type);
     list($pageName, $message, $type) = $this->processAction($pageName, $message, $type);
+    $this->logActivity($pageName, $message, $type);
     return new Page($pageName, $message, $type);
   }
   
@@ -34,8 +35,8 @@ class App {
       $pageName = "connexion";
       if(isset($_GET["page"]) && $message == "") {
         $message = "Tu n'as pas les droits nécessaires pour accéder à la page demandée. Merci de te connecter.";
+        $type = "danger";
       }
-      $type = "danger";
     }
     
     //return values
@@ -76,6 +77,24 @@ class App {
     
     //return values
     return array($pageName, $message, $type);
+  }
+  
+  function logActivity($pageName, $message, $type) {
+    $log['user'] = $_SESSION["user"]->getEmail();
+    if(isset($_GET["page"])) {
+      $log['getPage'] = addslashes($_GET["page"]);
+    } else {
+      $log['getPage'] = '-';
+    }
+    if(isset($_GET["action"])) {
+      $log['getAction'] = addslashes($_GET["action"]);
+    } else {
+      $log['getAction'] = '-';
+    }
+    $log['pageName'] = $pageName;
+    $log['message'] = $message;
+    $log['type'] = $type;
+    $_SESSION["bdd"]->addLog($log);
   }
 }
 ?>

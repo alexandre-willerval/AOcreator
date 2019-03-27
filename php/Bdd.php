@@ -38,6 +38,10 @@ class Bdd {
     $this->connection();
   }
   
+  public function addLog($log) {
+    $this->execute($log, "INSERT INTO logs VALUES(NULL, :user, :getPage, :getAction, :pageName, :message, :type, NULL)");
+  }
+  
   public function getPageList() {
     $result = $this->query("SELECT name FROM pages");
     for($i=0; $i<sizeOf($result); $i++) {

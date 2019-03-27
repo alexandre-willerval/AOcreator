@@ -4,6 +4,7 @@ class User {
   
   public function __construct() {
     $this->rights = 0;
+    $this->email = "-";
   }
   
   public function connexion($json) {

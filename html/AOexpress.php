@@ -1,3 +1,4 @@
+<?php if(!defined('securityCheck')) { die('Erreur : Accès direct à cette page interdit !'); } ?>
     <form id="expressForm" method="post" action="express.php" target="_blank">
       <div class="my-3">
         <label>Quelles briques de rédaction veux-tu télécharger ?</label>

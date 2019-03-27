@@ -1,3 +1,4 @@
+<?php if(!defined('securityCheck')) { die('Erreur : Accès direct à cette page interdit !'); } ?>
         <form id="form2" method="post" action="index.php?action=AOcreator_step2">
           <div role="tabpanel" class="row">
             <div class="col-12 col-md-2">

@@ -1,13 +1,12 @@
 <?php
 class History {
-  protected $proposalList;
   
   public function __construct() {
-    $this->proposalList = $_SESSION["bdd"]->getProposalList();
+    
   }
   
   public function getProposalList() {
-    return $this->proposalList;
+    return $_SESSION["bdd"]->getProposalList();
   }
   
   public static function AOhistory($pageName, $message, $type) {

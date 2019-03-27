@@ -1,3 +1,4 @@
+<?php if(!defined('securityCheck')) { die('Erreur : Accès direct à cette page interdit !'); } ?>
 <?php if(!isset($_SESSION["library"])) { $_SESSION["library"] = new Library(); } ?>  
     <table class="table table-striped">
       <thead>

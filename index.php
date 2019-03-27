@@ -5,6 +5,7 @@
   spl_autoload_register("getClass");
 
   session_start();
+  define('securityCheck', TRUE);
   if(!isset($_SESSION["app"])) { 
     $_SESSION["app"] = new App();
   }

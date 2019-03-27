@@ -1,3 +1,4 @@
+<?php if(!defined('securityCheck')) { die('Erreur : Accès direct à cette page interdit !'); } ?>
 <?php if(!isset($_SESSION["history"])) { $_SESSION["history"] = new History(); } ?>    
     <div>
       <em>TODO: search form</em>  

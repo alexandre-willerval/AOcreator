@@ -1,3 +1,4 @@
+<?php if(!defined('securityCheck')) { die('Erreur : Accès direct à cette page interdit !'); } ?>
     <div class="row justify-content-center">
       <div class="col-12 col-sm-8 col-md-6 col-lg-4">
         <form method="post" action="index.php?action=connexion">

@@ -1,4 +1,5 @@
 - AOstats (et Chart.js)
+- ajout BDD "connections" avec aussi les tentatives refusées de connexion
 - cookie "remember me"
 - AOcreator step2 (et jQuery-UI)
 

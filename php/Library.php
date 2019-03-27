@@ -1,18 +1,16 @@
 <?php
 class Library {
-  protected $brickList, $deletedList;
   
   public function __construct() {
-    $this->brickList = $_SESSION["bdd"]->getBrickList(0);
-    $this->deletedList = $_SESSION["bdd"]->getBrickList(1);
+    
   }
   
   public function getbrickList() {
-    return $this->brickList;
+    return $_SESSION["bdd"]->getBrickList(0);
   }
   
   public function getDeletedList() {
-    return $this->deletedList;
+    return $_SESSION["bdd"]->getBrickList(1);
   }
   
   public static function AOlibrary($pageName, $message, $type) {

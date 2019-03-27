@@ -1,3 +1,4 @@
+<?php if(!defined('securityCheck')) { die('Erreur : Accès direct à cette page interdit !'); } ?>
   <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container">
       <a class="navbar-brand" href="index.php?page=accueil">
@@ -8,8 +9,7 @@
       </button>
       <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar">
         <ul class="navbar-nav">
-<?php $menuList = $_SESSION["bdd"]->getMenuList($_SESSION["user"]->getRights());
-foreach($menuList as $menuItem) { ?>
+<?php $menuList = $_SESSION["bdd"]->getMenuList($_SESSION["user"]->getRights()); foreach($menuList as $menuItem) { ?>
           <li class="nav-item<?php echo ($menuItem['name'] == $_SESSION['page']->getName())?' active':''; ?>">
             <a class="nav-link" href="index.php?page=<?php echo $menuItem["name"]; ?>">
               <i class="<?php echo $menuItem["icon"]; ?>"></i> <?php echo $menuItem["title"].PHP_EOL; ?>
